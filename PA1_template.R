@@ -80,7 +80,6 @@ dates_in_range <- seq.Date(from = min(data$date),
 sum(!data$date[complete.cases(data)] %in% dates_in_range)
 
 ### 2. Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.
-### From the observations of total steps taken per day and average steps taken per interval, it seems that there is more variation between the number of steps taken day to day (Figure 1, above) than in the average of steps taken during each interval across the different days (Figure 2, above). Given this, the imputation strategy I will follow is to complete the missing cases using the average number of steps from the corresponding interval (rounded towards zero to avoid using fractional steps).
 
 ### 3. Create a new dataset that is equal to the original dataset but with the missing data filled in.
 
